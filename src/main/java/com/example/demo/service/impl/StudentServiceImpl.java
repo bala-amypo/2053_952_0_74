@@ -1,5 +1,10 @@
 package com.example.demo.service.impl;
 
-public interface StudentServiceImple{
-    
+import org.springframework.stereotype.Service;
+
+import com.example.demo.service.StudentService;
+
+@Service
+public interface StudentServiceImpl implements StudentService{
+
 }
