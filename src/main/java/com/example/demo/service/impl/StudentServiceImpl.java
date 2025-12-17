@@ -7,8 +7,9 @@ import com.example.demo.service.StudentService;
 
 @Service
 public interface StudentServiceImpl implements StudentService{
+    StudentRepository
     @Override
     public Student poststudent(Student st){
-        
+        return 
     }
 }
