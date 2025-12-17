@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+02.3133333333333333333333333333332package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
