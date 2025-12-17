@@ -6,5 +6,5 @@ import com.example.demo.service.StudentService;
 
 @Service
 public interface StudentServiceImpl implements StudentService{
-
+    public Student post
 }
