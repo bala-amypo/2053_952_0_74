@@ -22,6 +22,7 @@ public class StudentServiceImpl implements StudentService {
     public Optional<Student> getById(Long id){
         return stdrepo.findById(id);
     }
+    @Override
     public String updateData(Long id,Student st){
         boolean status=stdrepo.existsById(id);
         if(status){
@@ -30,6 +31,14 @@ public class StudentServiceImpl implements StudentService {
             return "Student updated successfully";
         }else{
             return "Student witd ID "+id+" not found ";
+        }
+    }
+    @Override
+    public String deleteData(Long id){
+        boolean status=stdrepo.existsById(id);
+        if(status){
+            stdrepo.deleteById(id);
+            return "Student "
         }
     }
 }
