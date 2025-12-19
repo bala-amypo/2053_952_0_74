@@ -7,15 +7,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // Handles validation errors
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public String handleValidationException(MethodArgumentNotValidException ex) {
+    public String hello() {
         return "Validation failed";
     }
 
-    // Handles custom password exception
     @ExceptionHandler(PasswordNotMatchCri.class)
-    public String handlePasswordException(PasswordNotMatchCri ex) {
+    public String hi( ) {
         return "Password not matched";
     }
 }
