@@ -9,7 +9,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> hello(MethodArgumentNotValidException ex) {
-        return "Validation failed";
+        Map<String,String> map=new HashMap<>();
+        ex.getBindingResult()
     }
 
     @ExceptionHandler(PasswordNotMatchCri.class)
