@@ -10,7 +10,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> hello(MethodArgumentNotValidException ex) {
         Map<String,String> map=new HashMap<>();
-        ex.getBindingResult().getFieldErrors().forEach(error->map.put(err))
+        ex.getBindingResult().getFieldErrors().forEach(error->map.put(error.getField(),error.getDefaultMessage()))
+        return new ResponseEntity<>(map,HttpStatus.)
     }
 
     @ExceptionHandler(PasswordNotMatchCri.class)
