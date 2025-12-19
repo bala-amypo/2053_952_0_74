@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public String hello() {
+    public ResponseEntity hello() {
         return "Validation failed";
     }
 
     @ExceptionHandler(PasswordNotMatchCri.class)
-    public String hi( ) {
+    public String hi() {
         return "Password not matched";
     }
 }

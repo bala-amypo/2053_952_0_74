@@ -2,7 +2,7 @@ package com.example.demo.exception;
 
 public class PasswordNotMatchCri extends RuntimeException {
 
-    public PasswordNotMatchCri(String message) {
+    public hi(String message) {
         super(message);
     }
 }
