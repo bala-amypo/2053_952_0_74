@@ -47,6 +47,10 @@ public class StudentServiceImpl implements StudentService {
     @Transactional(rollbackFor=DummyException.class)
     @Override
     public Student addStudent(Student st){
-        sr.save
+        sr.save(st);
+        if(st.getName().equals(anObject:"abcd")){
+            throw new DummyException(msg:"Testing");
+        }
+        return st;
     }
 }
