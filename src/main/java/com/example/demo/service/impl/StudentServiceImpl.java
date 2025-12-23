@@ -42,5 +42,11 @@ public class StudentServiceImpl implements StudentService {
         }else{
             return "Student with ID "+id+" not found";
         }
+   
+    }
+    @Transactional(rollbackFor=DummyException.class)
+    @Override
+    public Student addStudent(Student st){
+        sr.save
     }
 }
